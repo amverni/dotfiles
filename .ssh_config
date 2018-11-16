@@ -1,0 +1,13 @@
+Host caen login.engin.umich.edu
+	HostName login.engin.umich.edu
+	User amverni
+	ControlMaster auto
+	ControlPath ~/.ssh/_%r@%h:%p
+	ControlPersist 43200
+
+Host oncaen oncampus-course.engin.umich.edu
+	HostName oncampus-course.engin.umich.edu
+	User amverni
+	ControlMaster auto
+	ControlPath ~/.ssh/_%r@%h:%p
+	ControlPersist 43200
