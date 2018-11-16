@@ -5,3 +5,4 @@ alias pycodestyle="/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Ve
 alias pip2="python -m pip"
 alias pip3="python3 -m pip"
 alias py3=python3
+alias py=python
