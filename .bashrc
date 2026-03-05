@@ -1,8 +1,16 @@
+# =========================================================
+# ~/.bashrc
+# Minimal bash config for Codespaces + macOS
+# =========================================================
+
+# Ensure system paths are always present
+export PATH="/usr/bin:/bin:$HOME/bin:/usr/local/bin:$PATH"
+
+# Clear screen
 alias cl="clear"
-alias scheme="plt-r5rs"
-alias scm="plt-r5rs"
-alias pycodestyle="/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pycodestyle.py"
+
+# Python
 alias pip2="python -m pip"
 alias pip3="python3 -m pip"
-alias py3=python3
-alias py=python
+alias py3="python3"
+alias py="python"
