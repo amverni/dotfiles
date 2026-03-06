@@ -1,41 +1,37 @@
-# One line only
-add_newline = false
+format = """
+[](#001628)\
+$directory\
+[](fg:#001628 bg:#C8102E)\
+[](fg:#C8102E bg:#99D9D9)\
+$git_branch\
+$git_status\
+[ ](fg:#99D9D9)\
+"""
 
-# Order of things in the prompt
-format = "$directory$git_branch$git_status$character"
+# Disable the blank line at the start of the prompt
+# add_newline = false
 
-# Show the path
 [directory]
-style = "bold blue"
-truncate_to_repo = true
-truncation_length = 0
+style = "bg:#001628"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
-# Git branch
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"midgard" = "🌍"
+"packages" = "📦"
+
 [git_branch]
-format = " on $branch"
-style = "bold purple"
+symbol = ""
+style = "bg:#99D9D9"
+format = '[ $symbol $branch ]($style)'
 
-# Git status (dirty, ahead/behind)
 [git_status]
-format = " $all_status"
-style = "yellow"
-
-# Disable noise
-[nodejs]
-disabled = true
-
-[docker_context]
-disabled = true
-
-# Prompt symbol
-[character]
-success_symbol = " ❯"
-error_symbol = " ❯"
-
-# Command duration when slow
-[cmd_duration]
-min_time = 2000
-
-# Exit status on failure
-[status]
-disabled = false
+style = "bg:#99D9D9"
+format = '[$all_status$ahead_behind ]($style)'
