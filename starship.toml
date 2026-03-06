@@ -1,0 +1,41 @@
+# One line only
+add_newline = false
+
+# Order of things in the prompt
+format = "$directory$git_branch$git_status$character"
+
+# Show the path
+[directory]
+style = "bold blue"
+truncate_to_repo = true
+truncation_length = 0
+
+# Git branch
+[git_branch]
+format = " on $branch"
+style = "bold purple"
+
+# Git status (dirty, ahead/behind)
+[git_status]
+format = " $all_status"
+style = "yellow"
+
+# Disable noise
+[nodejs]
+disabled = true
+
+[docker_context]
+disabled = true
+
+# Prompt symbol
+[character]
+success_symbol = " ❯"
+error_symbol = " ❯"
+
+# Command duration when slow
+[cmd_duration]
+min_time = 2000
+
+# Exit status on failure
+[status]
+disabled = false
